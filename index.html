@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medlemmer og Resultater</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+</head>
+
+<body>
+    <h1>Medlemmer og Resultater</h1>
+
+    <div id="tabs">
+        <h2 data-tab-show="members-tab">Medlemmer</h2>
+        <h2 data-tab-show="results-tab">Resultater</h2>
+        <div id="members-tab" class="hide">
+            <select name="membersfilter" id="membersfilter">
+                <option value="group:all">alle</option>
+                <option value="age:18">18-årige</option>
+                <option value="active:1">aktive</option>
+                <option value="active:0">ikke-aktive</option>
+                <option value="group:junior">junior</option>
+                <option value="group:senior">senior</option>
+            </select>
+            <table id="members">
+                <thead>
+                    <tr>
+                        <th id="sort-member-name">Navn</th>
+                        <th id="sort-member-active">Aktiv</th>
+                        <th id="sort-member-birthday">Fødselsdag</th>
+                        <th id="sort-member-age">Alder</th>
+                        <th id="sort-member-group">Gruppe</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div id="results-tab" class="hide">
+            <select name="resultsfilter" id="resultsfilter">
+                <option value="all">alle</option>
+                <option value="discipline:breaststroke">bryst</option>
+                <option value="discipline:backstroke">ryg</option>
+                <option value="discipline:butterfly">butterfly</option>
+                <option value="discipline:freestyle">freestyle</option>
+                <option value="type:training">træning</option>
+                <option value="type:competition">stævne</option>
+
+            </select>
+            <table id="results">
+                <thead>
+                    <tr>
+                        <th data-action="sort" data-sortby="date">Dato</th>
+                        <th data-action="sort" data-sortby="memberName">Medlem</th>
+                        <th data-action="sort" data-sortby="discipline">Disciplin</th>
+                        <th data-action="sort" data-sortby="type">Type</th>
+                        <th data-action="sort" data-sortby="time">Tid</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+
+    </div>
+
+    <script src="script.js" type="module"></script>
+</body>
+
+</html>
